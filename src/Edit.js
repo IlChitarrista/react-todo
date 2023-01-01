@@ -5,7 +5,6 @@ import Button from "./Button";
 
 const Edit = ({ item, onComplete, onCancel, onConfirm, initialValue }) => {
   const [value, setValue] = useState(initialValue);
-  const completed = item.completed ? "line-through" : "";
   return (
     <div className="flex gap-2 w-96 m-auto min-h-fit">
       <input
@@ -15,7 +14,7 @@ const Edit = ({ item, onComplete, onCancel, onConfirm, initialValue }) => {
         onChange={onComplete}
       />
       <input
-        className={`rounded-lg text-center w-full p-1 mt-1 mb-1 mr-1 ${completed}`}
+        className={`rounded-lg text-center w-full p-1 mt-1 mb-1 mr-1`}
         value={value}
         onChange={(event) => setValue(event.target.value)}
         autoFocus
